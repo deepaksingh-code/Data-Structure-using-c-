@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+	int arr[5]={1,2,3,4,5}; //declear and intialize an array
+	int *p=arr;
+	
+	// 1st difference is sizeof
+	cout<<sizeof(arr)<<endl; // it will print the 40 bytes of entire array   
+	cout<<sizeof(p)<<endl; // it will print only 8 bytes
+	
+	//2nd difference of & operator
+	cout<<arr<<endl; //print the address of first element
+	cout<<p<<endl;  //print the address of array
+	
+	cout<<&p<<endl; //print the address where p is store in the memeory 
+	cout<<&arr<<endl; // print the starting address of array // for array memory will not create sepratly 
+	
+	// 3rd difference assignment
+	int *q=arr; // 
+	//arr=q; // error: incompatible types in assignment of ‘int*’ to ‘int [5]’
+
+	return 0;
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int i=2;
+    int *p= &i;
+    cout<<"Pointer Value is: "<<p<<endl;
+    //after increament pointer of p, it will increase the value by sizeof datatype
+    p++;
+    cout<<"after increament of p: "<<p<<endl;
+    
+    //if we add 2 in pointer then it will show the value by 
+    p=p+2;
+    cout<<"after add 2 in pointer: "<<p<<endl;
+    
+    /* since we have seen result then we notice that 
+    pointer arthmetics operations tottaly dependent on 
+    its datatype if datatype is int then it will operate 4bytes and
+    if datatype is char then i will opetate by 1 byte so on */
+    
+	return 0;
+}

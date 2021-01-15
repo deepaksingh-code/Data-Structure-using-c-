@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int i=5; 
+    int *p=&i;
+    
+    cout<<"Value of i: "<<i<<endl;
+    cout<<"Value of i by pointer: "<<*p<<endl;
+    
+    
+    i++;
+    cout<<"----------:After increament of i:----------- "<<endl;
+    cout<<"Value of i: "<<i<<endl;
+    cout<<"Value of i by pointer: "<<*p<<endl;
+    
+    /* if we increamnt variable then 
+    value will be update in the memory address
+    which is also pointed by pointer
+    so pointer will also have update value. */
+        
+    (*p)++;
+    cout<<"----------:After increament of i:-----------"<<endl;
+    cout<<"Value of i: "<<i<<endl;
+    cout<<"Value of i by pointer: "<<*p<<endl;
+    
+    /* if we increament *p variable then 
+    it will update value on address of variable i 
+    so i will also be updated because of 
+    same address */
+    
+    cout<<"value of pointer p or address i:: "<<p<<endl;
+    cout<<"---------After increament of p--------"<<endl;
+    p++;
+    
+    cout<<"Value of p "<<p<<endl;
+    cout<<"Value of address of pointer"<<*p<<endl; //Now its not pointing variable i.
+    
+    p--;
+    cout<<"---------After decreament of p--------"<<endl;
+    cout<<"Value of p: "<<p<<endl;
+    cout<<"value of address that is hold by pointer p: "<<*p<<endl; //now its again pointing variable i;
+    return 0;
+}

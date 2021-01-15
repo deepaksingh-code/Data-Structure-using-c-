@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int arr[5]={1,2,3,4,5}; //declear and intialize an array
+	
+	cout<<arr<<endl; //it print the address of starting address of block.
+	cout<<&arr[0]<<endl; // that print address of first element
+	
+	cout<<*arr<<endl; // it will do same as pointer,print the value of first element 
+	cout<<arr[0]<<endl; // it will also print the first element of array  
+	
+	int *p=arr;
+//	int *q= &arr; //error: cannot convert ‘int (*)[5]’ to ‘int*’ in initialization
+	
+	cout<<p<<endl; //it will print the address of first element 
+	cout<<*p<<endl; // it wil print the value of first element of array
+	
+	int *q=arr+2;
+//	arr=arr+2; //error: incompatible types in assignment of ‘int*’ to ‘int [5]’
+	cout<<q<<endl; //it will print the address of third element of array
+	cout<<*q<<endl; // print the 3rd element of array;
+	
+	
+	cout<<3[p]<<endl; // print the 4th element of array using pointer 
+	cout<<3[arr]<<endl; //it will do for that same
+	cout<<p[2]<<endl; //it will print 2nd element of the array by pointer
+	cout<<arr[2]<<endl; //it will also print second element of array
+	cout<<*(p+4)<<endl;// print the 5th element of array by pointer
+	cout<<*(arr+4)<<endl; // also print the 5th element of array
+	
+	
+	return 0;
+}

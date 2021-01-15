@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+void print(int *p){
+    cout<<*p<<endl;
+}
+void increamentPointer(int* p){
+    p++;  //it will increament address of local variable p of this function
+}
+
+void increamentValue(int *p){
+    (*p)++;            // this change the value on address which is passed in function
+}
+
+int sum(int a[],int size){
+    
+    /* here a[] is not an array, it is a pointer that has the address of array 
+    that we passed we called this function so we use a as pointer in this function*/
+    
+    cout<<"size of an array in sum function: "<<sizeof(a)<<endl;
+    int result=0;
+    for(int i=0;i<size;i++){
+        result+=a[i];
+    }
+    return result;
+    
+}
+int main() {
+    int i=5;
+    int *p=&i;
+    
+    print(p);// print value of i
+    
+    cout<<"before call function: "<<p<<endl;
+    increamentPointer(p);
+    cout<<"after call function: "<<p<<endl;
+    
+    
+    
+    cout<<"before call function: "<<*p<<endl;
+    increamentValue(p);
+    cout<<"after call function: "<<*p<<endl;
+    
+    int arr[]={1,2,3,4,5};
+    
+    cout<<"size of array in main fucntion: "<<sizeof(arr)<<endl;
+    cout<<"sum is: "<<sum(arr,5)<<endl;
+    /* array passed in function as pointer 
+    thats why the size of array print as pointer size or
+    only one element type.*/
+    
+    
+    
+	return 0;
+}

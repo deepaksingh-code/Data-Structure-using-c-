@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int a[]={1,2,3};
+    char c[]={'a','b','c'};
+    // /* here is int arr and char array behave different type 
+    
+    cout<<a<<endl; // it will print starting address of integer array
+    cout<<c<<endl; // it will print entire content of array till '\0'
+    
+    char * cp=&c[0];
+    
+    cout<<cp<<endl; // it will print characters till i will not get the '\0' null character
+    
+    char s[]="abcdef"; // it will create a array of 6 bytes 
+    char *p="abcdef"; //    it will create temporary memory of 6 bytes, some time we can get error because there can be read only memory
+    
+    cout<<s<<endl;
+    cout<<p<<endl; 
+    
+	return 0;
+}

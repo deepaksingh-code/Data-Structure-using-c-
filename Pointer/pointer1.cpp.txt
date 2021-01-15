@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int i=10;
+	cout<<"Value of i is: "<<i<<endl;
+	cout<<"address of var i is: "<<&i<<endl; 
+	
+	int *p=&i; 
+    cout<<"Address of i by pointer p: "<<p<<endl; //it will print address of i
+    cout<<"Value of i by pointer p: "<<*p<<endl; 
+    cout<<"Size of Integer i"<<sizeof(i)<<endl;
+    cout<<"Size of integer pointer p: "<<sizeof(p)<<endl;
+    
+    float f=23.10;
+    float *fp=&f;
+    cout<<"Address of f by pointer fp: "<<fp<<endl; //it will print address of f
+    cout<<"Value of f by pointer fp: "<<*fp<<endl; 
+    cout<<"Size of float i: "<<sizeof(f)<<endl;
+    cout<<"Size of float pointer fp: "<<sizeof(fp)<<endl;
+    
+
+    double d=23.34;
+    double *dp=&d;
+    cout<<"Address of d by pointer dp: "<<dp<<endl; //it will print address of i
+    cout<<"Value of d by pointer dp: "<<*dp<<endl; 
+    cout<<"Size of Double variable d "<<sizeof(d)<<endl;
+    cout<<"Size of Double pointer dp: "<<sizeof(dp)<<endl;
+    
+    char c='a';
+    char *cp=&c;
+    cout<<"Address of c by pointer cp: "<<cp<<endl; //it will print address of c
+    cout<<"Value of c by pointer cp: "<<*cp<<endl; 
+    cout<<"Size of char variable c: "<<sizeof(c)<<endl;
+    cout<<"Size of char pointer cp: "<<sizeof(cp)<<endl;
+    
+    
+	return 0;
+}
